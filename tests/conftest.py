@@ -7,6 +7,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from tests.locators import TestLocators
 
 
+
 @pytest.fixture(scope="session")
 def generate_password():
     lst = string.ascii_letters + string.digits

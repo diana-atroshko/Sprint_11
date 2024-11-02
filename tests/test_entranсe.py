@@ -53,7 +53,6 @@ class TestEntrance:
         )
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site/', f"Ожидался URL: 'https://stellarburgers.nomoreparties.site/', но был: {driver.current_url}"
 
-
     def test_entrance_by_button_in_register_form(self, driver):
         driver.get('https://stellarburgers.nomoreparties.site/register')
         button = WebDriverWait(driver, 20).until(

@@ -43,3 +43,4 @@ class TestTransition:
             EC.presence_of_element_located((TestLocators.ASSEMBLE_BURGER))
         )
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site/', f"Ожидался URL: 'https://stellarburgers.nomoreparties.site/', но был: {driver.current_url}"
+

@@ -30,5 +30,3 @@ class TestRegistration:
         except Exception as e:
             print("Ошибка при ожидании сообщения:", str(e))
 
-
-

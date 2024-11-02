@@ -24,4 +24,3 @@ class TestLocators:
     SECTION_BUNS = By.XPATH, "//h2[text()='Булки']"#раздел булки
     SECTION_SAUCES = By.XPATH, "//h2[text()='Соусы']"#раздел соусы
     SECTION_STUFFING = By.XPATH, "//h2[text()='Начинки']"#раздел начинки
-

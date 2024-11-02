@@ -40,3 +40,4 @@ class TestConstructorSections:
 
         assert WebDriverWait(driver, 10).until(
             EC.visibility_of_element_located((TestLocators.SECTION_STUFFING))), "Заголовок раздела 'Начинки' не виден в области просмотра"
+

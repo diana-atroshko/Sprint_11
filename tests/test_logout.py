@@ -15,3 +15,4 @@ class TestLogout:
             EC.presence_of_element_located((TestLocators.BUTTON_LOGIN1))
         )
         assert driver.current_url == 'https://stellarburgers.nomoreparties.site/login', f"Ожидался URL: 'https://stellarburgers.nomoreparties.site/login', но был: {driver.current_url}"
+
