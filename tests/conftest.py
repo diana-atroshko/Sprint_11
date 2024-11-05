@@ -5,22 +5,9 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from tests.locators import TestLocators
+from helpers import generate_password, generate_email
 
-
-
-@pytest.fixture(scope="session")
-def generate_password():
-    lst = string.ascii_letters + string.digits
-    password = ''.join(random.choice(lst) for _ in range(6))
-    return password
-
-@pytest.fixture(scope="session")
-def generate_email():
-    email= f'diana_atroshko_15_{random.randint(100, 999)}@yandex.ru'
-    return email
-
-
-@pytest.fixture(scope="session")
+@pytest.fixture(scope="function")
 def driver():
     driver = webdriver.Chrome()
     yield driver
@@ -28,9 +15,9 @@ def driver():
 
 
 @pytest.fixture
-def create_account(driver, generate_email, generate_password):
-    email_1 = generate_email
-    password_1 = generate_password
+def create_account(driver):
+    email_1 = generate_email()
+    password_1 = generate_password()
     name = "Диана"
     driver.get("https://stellarburgers.nomoreparties.site/register")
     driver.find_element(*TestLocators.NAME).send_keys(name)
